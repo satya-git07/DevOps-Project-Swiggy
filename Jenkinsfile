@@ -5,7 +5,7 @@ pipeline {
         CLUSTER_NAME = 'my-cluster1'
         ZONE = 'us-west3'
         PROJECT_ID = 'lyrical-bus-452711-c5'
-        GIT_BRANCH = 'main'
+        GIT_BRANCH = 'master'
     }
 
     stages {
