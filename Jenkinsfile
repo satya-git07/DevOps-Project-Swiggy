@@ -59,9 +59,7 @@ stage("Docker Build & Push") {
         stage('Terraform Apply') {
             steps {
                 withCredentials([file(credentialsId: 'gcp-sa', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
-                    {
                        sh 'terraform apply -auto-approve'
-                 }
                 }
             }
         }
