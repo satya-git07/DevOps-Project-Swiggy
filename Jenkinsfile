@@ -35,7 +35,7 @@ stage("Docker Build & Push") {
         script {
             withDockerRegistry(credentialsId: 'docker-credentials', toolName: 'docker') {
                 dir('bookmyshow-app') {
-                    sh "docker build -f Dockerfile -t swigy ."
+                    sh "docker build -t swigy ."
                     sh "docker tag swigy:latest satyadockerhub07/swigy:tagname"
                     sh "docker push satyadockerhub07/swigy:tagname"
                 }
